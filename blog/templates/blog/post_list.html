@@ -6,8 +6,19 @@
         <div>
             <h1><a href="">Blog Ali</a></h1>
         </div>
+      
 
-        <div>
+
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+
+        <!--<div>
             <p>published: 19.06.2016, 16:20</p>
             <h2><a href="">my first post</a></h2>
             <p>asdfgs.</p>
@@ -17,6 +28,6 @@
             <p>published: 19.06.2016, 16:21</p>
             <h2><a href="">My second post</a></h2>
             <p>bhn nbhg.</p>
-        </div>
+        </div>-->
     </body>
 </html>
